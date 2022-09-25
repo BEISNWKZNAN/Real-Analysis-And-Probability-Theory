@@ -1,0 +1,27 @@
+\chapter{抽象积分}
+
+\section{回顾Riemann积分}
+首先我们知道Riemann积分的定义
+$$\int_{a}^{b} f(x) \,dx=\sum_{n = 1}^{n}f(t_{i})m(E_{i}) $$
+其中 $m(E_{i})$总是一个区间的长度（测度），将其与函数的某个值相乘以得到函数所围面积的估计。即以函数的图以及$x=a,x=b,y=0$为边界点的图形（集合）的面积（测度）。更进一步的，我们有在学习重积分时定义的Jordan测度。
+\begin{definition}{Jordan测度}
+设D是$\mathbb{R}^{n}$中的有界集，则存在$I=\{x\in \mathbb{R}^{n}:a_{i}\leqslant x_{i}\leqslant b_{i},i=1,2,\cdots ,n\},I\supseteq D$，则定义函数$\mathcal{X}_D:I\to \mathbb{R},x\to \left\{
+    \begin{array}{ll}
+        1,x\in D \\
+        0,x\notin D 
+    \end{array}
+\right.$.若函数$\mathcal{X}_{D}$是可积的，则称D为Jordan可测集，$\int_{I}\mathcal{X}_{D}(x)dx$定义为D的Jordan测度。
+\end{definition}
+这个测度的定义实际上是用内部的小矩形去逼近集合的面积。显然，I的选取并不影响D的可测性以及测度，所以这个定义是好的。
+\par
+同时我们可以看到集函数m一样是一个测度，不过他似乎只能定义在区间上。
+\begin{definition}{区间测度}
+若I是$\mathbb{R} $上的有界区间，即$I=(a,b),(a,b],[a,b)$或$[a,b],a\leqslant b,a,b\in \mathbb{R}$,则定义$m(I)=b-a$.
+\par
+若I是无界区间，则$m(I)=+\infty. $
+\end{definition}
+通过这两个已知的测度，我们应该可以认识到测度应该有的一些性质。并试图得到衡量一个集合大小的一般理论。
+\section{测度的概念}
+首先，测度应该是一个集函数$m:P(X)\to \mathbb{R}^{*}$.
+\par
+其次，我们是试图衡量面积、长度之类的东西，所以他应该是要保留一些并集的性质，他应该可以需要保持有限并，即有有限可加性。
